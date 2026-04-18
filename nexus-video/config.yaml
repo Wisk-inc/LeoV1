@@ -1,0 +1,27 @@
+models:
+  wan22_t2v: "Wan-AI/Wan2.2-T2V-A14B-Diffusers"
+  wan22_i2v: "Wan-AI/Wan2.2-I2V-A14B-Diffusers"
+  wan22_ti2v: "Wan-AI/Wan2.2-TI2V-5B-Diffusers"
+  qwen: "Qwen/Qwen2.5-7B-Instruct"
+  rife: "nexus-video/models/rife"
+  upscaler: "nexus-video/models/basicvsr"
+
+paths:
+  outputs: "nexus-video/outputs"
+  temp: "nexus-video/temp"
+  models: "nexus-video/models"
+
+defaults:
+  resolution: "1280*720"
+  fps: 24
+  steps: 40
+  guidance_scale: 5.0
+  duration: 5
+  upscale: false
+  denoise: true
+  sharpen: true
+
+gpu:
+  enable_xformers: true
+  enable_flash_attn: true
+  precision: "bf16" # or fp16, fp8
